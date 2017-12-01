@@ -24,6 +24,7 @@ tasks = []
 @app.route('/todos' , methods=['POST' , 'GET'])
 def todos():
 
+    global tasks
     if request.method == 'POST':
         task = request.form['task']
         tasks.append(task)
